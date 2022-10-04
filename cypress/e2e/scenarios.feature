@@ -46,4 +46,16 @@ Scenario: User is able to Checkout
   When A user clicks on the CHECKOUT button
   Then A error message will be displayed
 
-   
+Feature: Checkout Feature
+ 
+Scenario: User is able to finish the Checkout
+  Given A user has successfully logged in 
+  And A user added items in the shopping cart
+  When A user clicks on the CHECKOUT button
+  Then A checkout page will be displayed
+
+ Scenario: User is not able to finish the Checkout
+  Given A user has successfully logged in 
+  And A user did not add items in the shopping cart
+  When A user clicks on the CHECKOUT button
+  Then A error message will be displayed
