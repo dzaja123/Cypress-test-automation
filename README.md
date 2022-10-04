@@ -4,7 +4,25 @@
 
 ## Project and Technologies
 
-The main goal of the project is to write automated tests using Cypress framework.
 
-Web site that is automated is Swag Labs (https://www.saucedemo.com/)
+### Cypress
 
+Introduction with Cypress:
+Cypress is a front end or UI testing tool. It can be used in all major browsers like chrome, edge, Firefox, electron etc. Cypress majorly supports JavaScript to automate test script design. The support of chai and Should assertion libraries is in built with cypress. It allows BDD and TDD approaches. Cypress has it’s own test runner which is very useful for test execution and debugging but apart from that user can control the execution from CLI as well.
+
+
+### Prerequisites
+
+The only requirement for this project is to have [Node.js](https://nodejs.org/en/) installed on your machine.
+
+### Installation
+
+```shell
+npm install cypress --save-dev
+```
+
+### Run the app
+
+```shell
+npx cypress open
+```
