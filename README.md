@@ -8,7 +8,7 @@
 ### Cypress
 
 Introduction with Cypress:
-Cypress is a front end or UI testing tool. It can be used in all major browsers like chrome, edge, Firefox, electron etc. Cypress majorly supports JavaScript to automate test script design. The support of chai and Should assertion libraries is in built with cypress. It allows BDD and TDD approaches. Cypress has it’s own test runner which is very useful for test execution and debugging but apart from that user can control the execution from CLI as well.
+Cypress is a front end or UI testing tool. It can be used in all major browsers like Chrome, Edge, Firefox, Electron etc. Cypress majorly supports JavaScript to automate test script design. The support of chai and Should assertion libraries is in built with Cypress. It allows BDD and TDD approaches. Cypress has it’s own test runner which is very useful for test execution and debugging but apart from that user can control the execution from CLI as well.
 
 
 ### Prerequisites
