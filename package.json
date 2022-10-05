@@ -1,0 +1,34 @@
+{
+    "name": "endava-praksa",
+    "version": "1.0.0",
+    "description": "cypress, QA, automation",
+    "main": "cypress.config.js",
+    "scripts": {
+        "test": "cypress open"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dzaja123/Endava-Praksa.git"
+    },
+    "keywords": [
+        "Cypress"
+    ],
+    "author": "dzaja123",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dzaja123/Endava-Praksa/issues"
+    },
+    "homepage": "https://github.com/dzaja123/Endava-Praksa#readme",
+    "devDependencies": {
+        "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+        "cypress": "^10.9.0",
+        "cypress-cucumber-preprocessor": "^4.3.1",
+        "esbuild": "^0.15.10"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true
+    },
+    "dependencies": {
+        "@badeball/cypress-cucumber-preprocessor": "^13.0.2"
+    }
+}
