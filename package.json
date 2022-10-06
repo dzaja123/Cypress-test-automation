@@ -20,15 +20,10 @@
     },
     "homepage": "https://github.com/dzaja123/Endava-Praksa#readme",
     "devDependencies": {
+        "@badeball/cypress-cucumber-preprocessor": "^13.0.2",
         "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
         "cypress": "^10.9.0",
-        "cypress-cucumber-preprocessor": "^4.3.1",
-        "esbuild": "^0.15.10"
-    },
-    "cypress-cucumber-preprocessor": {
-        "nonGlobalStepDefinitions": true
-    },
-    "dependencies": {
-        "@badeball/cypress-cucumber-preprocessor": "^13.0.2"
+        "esbuild": "^0.15.10",
+        "multiple-cucumber-html-reporter": "^3.0.1"
     }
 }
