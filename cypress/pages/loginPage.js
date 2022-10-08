@@ -19,9 +19,13 @@ class homeSaucePage {
     }
 
     submitLogin(username, password) {
-        this.elements.usernameInput().type(username);
-        this.elements.passwordInput().type(password);
-        this.elements.loginBtn().click();
+        this.typeUsername(username);
+        this.typePassword(password);
+        this.clickLogin();
+    }
+
+    checkErrorMessage(errorMessage) {
+        this.elements.errorMessage().should("have.text", errorMessage);
     }
 }
 

@@ -1,15 +1,33 @@
 import { Given, When, And, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-const loginPage = require("../../pages/LoginPage");
+const loginPage = require("../../pages/loginPage");
+const sauceDemoUrl = "https://www.saucedemo.com/"
 
-Given("A web browser is at the saucelabs login page", () => {
-    cy.visit("https://www.saucedemo.com/");
+Given("A user is at the saucelabs login page", () => {
+    cy.visit(sauceDemoUrl);
 });
 
-When("A user enters the username {string}, the password {string}, and clicks on the login button", (username, password) => {
-    loginPage.submitLogin(username, password)
+When("A user enters the username {string}", (username) => {
+    loginPage.typeUsername(username);
 });
 
+When("A user enters the password {string}", (password) => {
+    loginPage.typePassword(password);
+});
+
+When("A user clicks on the login button", () => {
+    loginPage.clickLogin();
+});
+
+Then("Then User is logged in", () => {
+    cy.url().should("contains", "/inventory.html");
+});
+
+Then("The error message {string} is displayed", (errorMessage) => {
+    loginPage.checkErrorMessage(errorMessage);
+});
+
+/*
 When("A user provides incorrect credentials, and clicks on the login button", (table) => {
     table.hashes().forEach((row) => {
         cy.log(row.username);
@@ -17,11 +35,4 @@ When("A user provides incorrect credentials, and clicks on the login button", (t
         loginPage.submitLogin(row.username, row.password)
     });
 });
-
-Then("the url will contains the inventory subdirectory", () => {
-    cy.url().should("contains", "/inventory.html");
-});
-
-Then("The error message {string} is displayed", (errorMessage) => {
-    loginPage.elements.errorMessage().should("have.text", errorMessage);
-});
+*/
