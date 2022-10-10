@@ -26,13 +26,3 @@ Then("Then User is logged in", () => {
 Then("The error message {string} is displayed", (errorMessage) => {
     loginPage.checkErrorMessage(errorMessage);
 });
-
-/*
-When("A user provides incorrect credentials, and clicks on the login button", (table) => {
-    table.hashes().forEach((row) => {
-        cy.log(row.username);
-        cy.log(row.password);
-        loginPage.submitLogin(row.username, row.password)
-    });
-});
-*/
