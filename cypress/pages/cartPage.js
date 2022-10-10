@@ -10,30 +10,33 @@ class cartPage {
         zipCodeField: () => cy.get('[data-test="postalCode"]'),
         continueButton: () => cy.get('[data-test="continue"]'),
         finishButton: () => cy.get('[data-test="finish"]'),
+        checkoutComplete: () => cy.get('.title'),
     };
 
-    clickAddItem() {
-        this.elements.addItemButton().click();
-    }
+    clickButton(string) {
+        button = NaN;
 
-    clickCartButton() {
-        this.elements.cartButton().click();
-    }
-
-    clickCheckoutButton() {
-        this.elements.checkoutButton().click();
-    }
-
-    clickRemoveItemButton() {
-        this.elements.removeItemButton().click();
-    }
-
-    clickContinueButton() {
-        this.elements.continueButton().click();
-    }
-
-    clickFinishButton() {
-        this.elements.finishButton().click();
+        switch (string) {
+            case "Add":
+                button = this.elements.addItemButton();
+                break;
+            case "Cart":
+                button = this.elements.cartButton();
+                break;
+            case "Checkout":
+                button = this.elements.checkoutButton();
+                break;
+            case "Remove":
+                button = this.elements.removeItemButton();
+                break;
+            case "Continue":
+                button = this.elements.removeItemButton();
+                break;
+            case "Finish":
+                button = this.elements.finishButton();
+                break;
+        }
+        button.click();
     }
 
     cartItemDisplayed() {
@@ -57,7 +60,7 @@ class cartPage {
     }
 
     checkoutComplete() {
-        cy.url().should("contains", "/checkout-complete.html");
+        cy.elements.checkoutComplete().should("contains", "CHECKOUT: COMPLETE!");
     }
 }
 

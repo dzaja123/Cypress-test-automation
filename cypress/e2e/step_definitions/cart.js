@@ -13,8 +13,8 @@ Given('A user has successfully logged in', () => {
     loginPage.submitLogin(username, password);
 });
 
-When('A user clicks on the Add button', () => {
-    cartPage.clickAddItem();
+When('A user clicks on the {string} button', (button) => {
+    cartPage.clickButton(button)
 });
 
 Then('A item will be added to the cart', () => {
@@ -22,18 +22,9 @@ Then('A item will be added to the cart', () => {
     cartPage.cartItemDisplayed();
 });
 
-When('A user clicks on the Remove button', () => {
-    cartPage.clickRemoveItemButton();
-});
-
 Then('A item will be removed from the cart', () => {
     cartPage.clickCartButton();
     cartPage.cartItemNotDisplayed();
-});
-
-When('A user clicks on the CHECKOUT button', () => {
-    cartPage.clickCartButton();
-    cartPage.clickCheckoutButton();
 });
 
 When('A user types his first name {string}', (firstName) => {
@@ -48,14 +39,7 @@ When('A user types his zip code {string}', (zipCode) => {
     cartPage.enterZipCode(zipCode);
 });
 
-When('A user clicks on the Continue button', () => {
-    cartPage.clickContinueButton();
-});
-
-When('A user clicks Finish button', () => {
-    cartPage.clickFinishButton();
-});
-
 Then('A item checkout will be successfull', () => {
+    cartPage.clickCartButton();
     cartPage.checkoutComplete();
 });
