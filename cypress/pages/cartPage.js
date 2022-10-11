@@ -14,37 +14,39 @@ class cartPage {
     };
 
     clickButton(string) {
-        button = NaN;
 
         switch (string) {
             case "Add":
-                button = this.elements.addItemButton();
+                this.elements.addItemButton().click();
                 break;
             case "Cart":
-                button = this.elements.cartButton();
+                this.elements.cartButton().click();
                 break;
             case "Checkout":
-                button = this.elements.checkoutButton();
+                this.elements.checkoutButton().click();
                 break;
             case "Remove":
-                button = this.elements.removeItemButton();
+                this.elements.removeItemButton().click();
                 break;
             case "Continue":
-                button = this.elements.removeItemButton();
+                this.elements.continueButton().click();
                 break;
             case "Finish":
-                button = this.elements.finishButton();
+                this.elements.finishButton().click();
                 break;
         }
-        button.click();
+    }
+
+    clickCartButton() {
+        this.elements.cartButton().click();
     }
 
     cartItemDisplayed() {
-        this.elements.addedItem().should('be.visible')
+        this.elements.addedItem().should('be.visible');
     }
 
     cartItemNotDisplayed() {
-        this.elements.addedItem().should('not.exist')
+        this.elements.addedItem().should('not.exist');
     }
 
     enterFirstName(firstName) {
@@ -60,7 +62,7 @@ class cartPage {
     }
 
     checkoutComplete() {
-        cy.elements.checkoutComplete().should("contains", "CHECKOUT: COMPLETE!");
+        this.elements.checkoutComplete().contains("Checkout: Complete!");
     }
 }
 

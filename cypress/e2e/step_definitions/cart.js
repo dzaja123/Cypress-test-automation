@@ -17,6 +17,10 @@ When('A user clicks on the {string} button', (button) => {
     cartPage.clickButton(button)
 });
 
+When('A user clicks on the cart button', () => {
+    cartPage.clickCartButton();
+});
+
 Then('A item will be added to the cart', () => {
     cartPage.clickCartButton();
     cartPage.cartItemDisplayed();
@@ -40,6 +44,5 @@ When('A user types his zip code {string}', (zipCode) => {
 });
 
 Then('A item checkout will be successfull', () => {
-    cartPage.clickCartButton();
     cartPage.checkoutComplete();
 });
