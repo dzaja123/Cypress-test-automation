@@ -19,7 +19,7 @@ When("A user clicks on the login button", () => {
     loginPage.clickLogin();
 });
 
-Then("Then User is logged in", () => {
+Then("A user is logged in", () => {
     cy.url().should("contains", "/inventory.html");
 });
 
