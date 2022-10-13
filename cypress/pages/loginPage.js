@@ -1,4 +1,4 @@
-class homeSaucePage {
+class loginPage {
     elements = {
         usernameInput: () => cy.get("#user-name"),
         passwordInput: () => cy.get("#password"),
@@ -29,4 +29,4 @@ class homeSaucePage {
     }
 }
 
-module.exports = new homeSaucePage();
+module.exports = new loginPage();

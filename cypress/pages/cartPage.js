@@ -11,6 +11,7 @@ class cartPage {
         continueButton: () => cy.get('[data-test="continue"]'),
         finishButton: () => cy.get('[data-test="finish"]'),
         checkoutComplete: () => cy.get('.title'),
+        zipCodeError: () => cy.get('[data-test="error"]'),
     };
 
     clickButton(string) {
@@ -63,6 +64,10 @@ class cartPage {
 
     checkoutComplete() {
         this.elements.checkoutComplete().contains("Checkout: Complete!");
+    }
+
+    checkZipCodeErrorMessage(errorMessage) {
+        this.elements.zipCodeError().contains(errorMessage);
     }
 }
 

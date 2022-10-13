@@ -16,7 +16,7 @@ Feature: Cart
 
     Scenario: User is able to Checkout 
         When A user clicks on the "Add" button
-        And A user clicks on the cart button
+        And A user clicks on the "Cart" button
         And A user clicks on the "Checkout" button
         And A user types his first name "Petar"
         And A user types his last name "Lazic"
@@ -24,3 +24,12 @@ Feature: Cart
         And A user clicks on the "Continue" button
         And A user clicks on the "Finish" button
         Then A item checkout will be successfull 
+
+    Scenario: User is not able to Checkout 
+        When A user clicks on the "Add" button
+        And A user clicks on the "Cart" button
+        And A user clicks on the "Checkout" button
+        And A user types his first name "Petar"
+        And A user types his last name "Lazic"
+        And A user clicks on the "Continue" button
+        Then The Zip Code error message "Error: Postal Code is required" is displayed 

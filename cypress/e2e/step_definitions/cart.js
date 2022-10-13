@@ -1,15 +1,13 @@
 import { Given, When, And, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-const loginPage = require("../../pages/loginPage");
-const cartPage = require("../../pages/cartPage");
-
-const sauceDemoUrl = "https://www.saucedemo.com/"
+import cartPage from "../../pages/cartPage"
+import loginPage from "../../pages/loginPage";
 
 const username = "standard_user"
 const password = "secret_sauce"
 
 Given('A user has successfully logged in', () => {
-    cy.visit(sauceDemoUrl);
+    cy.visit('/');
     loginPage.submitLogin(username, password);
 });
 
@@ -45,4 +43,8 @@ When('A user types his zip code {string}', (zipCode) => {
 
 Then('A item checkout will be successfull', () => {
     cartPage.checkoutComplete();
+});
+
+Then('The Zip Code error message {string} is displayed', (errorMessage) => {
+    cartPage.checkZipCodeErrorMessage(errorMessage);
 });

@@ -1,10 +1,9 @@
 import { Given, When, And, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-const loginPage = require("../../pages/loginPage");
-const sauceDemoUrl = "https://www.saucedemo.com/"
+import loginPage from "../../pages/loginPage";
 
 Given("A user is at the saucelabs login page", () => {
-    cy.visit(sauceDemoUrl);
+    cy.visit('/');
 });
 
 When("A user enters the username {string}", (username) => {
