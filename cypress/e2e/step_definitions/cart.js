@@ -45,6 +45,6 @@ Then('A item checkout will be successfull', () => {
     cartPage.checkoutComplete();
 });
 
-Then('The Zip Code error message {string} is displayed', (errorMessage) => {
-    cartPage.checkZipCodeErrorMessage(errorMessage);
+Then('The error message {string} is displayed', (errorMessage) => {
+    loginPage.errorMessage(errorMessage);
 });

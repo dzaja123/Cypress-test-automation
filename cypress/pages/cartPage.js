@@ -38,10 +38,6 @@ class cartPage {
         }
     }
 
-    clickCartButton() {
-        this.elements.cartButton().click();
-    }
-
     cartItemDisplayed() {
         this.elements.addedItem().should('be.visible');
     }
@@ -64,10 +60,6 @@ class cartPage {
 
     checkoutComplete() {
         this.elements.checkoutComplete().contains("Checkout: Complete!");
-    }
-
-    checkZipCodeErrorMessage(errorMessage) {
-        this.elements.zipCodeError().contains(errorMessage);
     }
 }
 
