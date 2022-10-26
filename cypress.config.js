@@ -18,5 +18,6 @@ module.exports = defineConfig({
         specPattern: "cypress/e2e/features/*.feature",
         baseUrl: "https://www.saucedemo.com",
         chromeWebSecurity: false,
+        video: false
     },
 });

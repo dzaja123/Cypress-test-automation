@@ -4,7 +4,9 @@
     "description": "cypress, QA, automation",
     "main": "cypress.config.js",
     "scripts": {
-        "test": "cypress open"
+        "test": "cypress open",
+        "login": "cypress run --tag TAGS=@loginFeature",
+        "login2": "cypress run -e TAGS='@loginFeature'"
     },
     "repository": {
         "type": "git",

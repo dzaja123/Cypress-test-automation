@@ -1,3 +1,4 @@
+@cartFeature
 Feature: Cart
 
     Feature Cart will work depending on the user added/removed items in the cart.
@@ -32,4 +33,4 @@ Feature: Cart
         And A user types his first name "Petar"
         And A user types his last name "Lazic"
         And A user clicks on the "Continue" button
-        Then The error message "Error: Postal Code is required" is displayed  
+        Then The error message "Error: Postal Code is required" will be displayed  

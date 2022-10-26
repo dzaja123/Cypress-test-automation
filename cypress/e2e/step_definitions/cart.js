@@ -1,6 +1,6 @@
 import { Given, When, And, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-import cartPage from "../../pages/cartPage"
+import cartPage from "../../pages/cartPage";
 import loginPage from "../../pages/loginPage";
 
 const username = "standard_user"
@@ -16,12 +16,12 @@ When('A user clicks on the {string} button', (button) => {
 });
 
 Then('A item will be added to the cart', () => {
-    cartPage.clickCartButton();
+    cartPage.clickButton("Cart");
     cartPage.cartItemDisplayed();
 });
 
 Then('A item will be removed from the cart', () => {
-    cartPage.clickCartButton();
+    cartPage.clickButton("Cart");
     cartPage.cartItemNotDisplayed();
 });
 
@@ -41,6 +41,6 @@ Then('A item checkout will be successfull', () => {
     cartPage.checkoutComplete();
 });
 
-Then('The error message {string} is displayed', (errorMessage) => {
-    loginPage.errorMessage(errorMessage);
+Then('The error message {string} will be displayed', (errorMessage) => {
+    loginPage.checkErrorMessage(errorMessage);
 });

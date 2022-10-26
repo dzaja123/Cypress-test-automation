@@ -1,3 +1,4 @@
+@loginFeature
 Feature: Login page
 
     Feature Login page will work depending on the user credentials.
