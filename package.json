@@ -5,8 +5,8 @@
     "main": "cypress.config.js",
     "scripts": {
         "test": "cypress open",
-        "login": "cypress run --tag TAGS=@loginFeature",
-        "login2": "cypress run -e TAGS='@loginFeature'"
+        "login": "npx cypress run -e TAGS='@loginFeature'",
+        "cart": "npx cypress run -e TAGS='@cartFeature'"
     },
     "repository": {
         "type": "git",
