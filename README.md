@@ -1,4 +1,4 @@
-# Cypress test automation
+# Cypress Test Automation
 
 ---
 
