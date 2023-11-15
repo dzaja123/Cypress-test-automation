@@ -1,4 +1,4 @@
-# QA Internership
+# Cypress test automation
 
 ---
 
